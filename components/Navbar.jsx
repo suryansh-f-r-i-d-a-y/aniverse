@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../app/styles/nav.module.css'
 import Button from '@mui/material/Button';
-import { Stack, colors } from '@mui/material';
+import { Stack } from '@mui/material';
 
 const Navbar = () => {
     return (
@@ -14,10 +14,9 @@ const Navbar = () => {
                        <a href="/browse"><li sx={{}} >Browse</li></a> 
                        <a href="/profile"> <li> Profile </li></a> 
                       
-                       
-
                 </Stack>
-                <Button sx={{height:"fit-content"}} variant="contained" disableElevation>
+
+                <Button href="/signup" sx={{height:"fit-content"}} variant="contained" disableElevation>
                     SignUp
                 </Button>
 
