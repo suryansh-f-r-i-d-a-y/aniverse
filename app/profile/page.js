@@ -1,7 +1,11 @@
-export default function Page(){
+import { Box } from "@mui/material";
+
+export default function Profile(){
     return(
         <>
-        this is profile
+        <Box sx={{height:'50vh', width:'100vw'}} style={{background:'   '}}>
+
+        </Box>
         </>
     );
 }
