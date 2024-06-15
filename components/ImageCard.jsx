@@ -1,6 +1,6 @@
 import styles from '../app/styles/card.module.css'
 import AddRoundedIcon from '@mui/icons-material/AddRounded';
-export default function ImageCard({image , title }) {
+export default function ImageCard({key ,image , title }) {
 
 
   // console.log(image);

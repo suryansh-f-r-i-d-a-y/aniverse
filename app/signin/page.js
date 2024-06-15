@@ -14,7 +14,7 @@ export default function SignIn() {
                     <TextField id="outlined-basic" label="Username" variant="outlined" sx={{ width: '90%' }} ></TextField>
                     <TextField id="outlined-basic" label="Password" variant="outlined" type='password' sx={{ width: '90%' }}></TextField>
                     <Button variant="contained" >Sign Up</Button>
-                    <h3>Don't have a account ? <span style={{ color:'#1976d2' }}> <a href="/signup"> create account</a></span> </h3>
+                    <h3>Don&apos;t have a account &quest; <span style={{ color:'#1976d2' }}> <a href="/signup"> create account</a></span> </h3>
                 </Stack>
 
             </Paper>
