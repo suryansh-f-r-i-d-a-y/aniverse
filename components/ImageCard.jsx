@@ -1,22 +1,20 @@
 import styles from '../app/styles/card.module.css'
-export default function ImageCard({image}) {
+import AddRoundedIcon from '@mui/icons-material/AddRounded';
+export default function ImageCard({image , title }) {
+
 
   // console.log(image);
 
   return (
-
+<div className={styles.cardContainer}>
     <div  className={styles.main} style={{ backgroundImage: `url('${image}')` }}>
     <div className={styles.buttonWrapper}>
     <button className={styles.button}>
-      1
-    </button>
-    <button className={styles.button}>
-      2
-    </button>
-    <button className={styles.button}>
-      3
+      <AddRoundedIcon style={{fill:'white'}}/>
     </button>
       </div>
+  </div>
+  <span>{title}</span>
   </div>
   );
 }
