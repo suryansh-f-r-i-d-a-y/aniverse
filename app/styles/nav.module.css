@@ -3,9 +3,22 @@
     padding-top: 1rem;
     width: 100%;
     align-items: center;
+    box-sizing: border-box;
+    color: white;
 }
 
 .logo{
     display: flex;
     align-items: center;
 }
+
+
+.menu{
+    text-decoration: none;
+    color:#454343;
+}
+
+.menu:hover{
+    color: #ebebeb;
+}
+

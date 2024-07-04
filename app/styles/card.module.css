@@ -1,13 +1,13 @@
-.main {
+.image {
   padding: 1em;
   padding-bottom: 1.1em;
-  border-radius: 4px;
   height: 265px;
   width: 100%;
   background-size: cover;
+  box-sizing: border-box;
 }
 
-.button {
+/* .button {
   border-radius: 50%;
   height: 30px;
   width: 30px;
@@ -17,25 +17,48 @@
   border: 0;
   display: none;
   cursor: pointer;
-}
+} */
 
-.buttonWrapper {
+/* .buttonWrapper {
   height: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+} */
+
+/* .buttonWrapper:hover{
+  .button{
+    display: flex;
+  }
+} */
+
+.cardContainer {
+  flex-direction: column;
+  display: flex;
+  width: 185px;
+  margin: 1em;
+  gap: 0.5rem;
+  position: relative;
+  box-sizing: border-box;
 }
 
-.buttonWrapper:hover{
-  .button{
+.cardContainer:hover {
+  .cardDesc {
     display: flex;
   }
 }
 
-.cardContainer{
-  display: flex;
-  flex-direction: column;
-  width: 185px;
-  margin: 1em;
-  gap:0.5rem;
+.cardDesc {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(36, 34, 34, 0.7);
+}
+
+.title{
+  text-decoration: none;
+  color: white;
 }
