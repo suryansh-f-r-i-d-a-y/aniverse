@@ -5,9 +5,8 @@ import axios from "axios";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import styles from '../../styles/animeinfo.module.css'
-import { InsertEmoticon } from "@mui/icons-material";
 
-export default function id() {
+export default function Animeinfo() {
 
     const { id } = useParams();
 
@@ -48,9 +47,14 @@ export default function id() {
             <Box className={styles.secBack} sx={{ width: '80%', height: '20vh', margin: 'auto' }}>
                 <span> Information </span>
 
-                <Stack> <span>Genre:{animedetails?.genres?.map(item => (
-                    <button> {item.name}</button>
-                ))}</span></Stack>
+                <Stack> <span>Genre: {animedetails?.genres?.map(item => (
+                    <button key={item.mal_id}> {item.name}</button>
+                ))}</span>
+                <span>Popularity: {animedetails.popularity}</span>
+                <span>Rank: #{animedetails.rank}</span>
+                <span>Rating: {animedetails.rating}</span>
+                <span>Score: {animedetails.score}</span>
+                </Stack>
             </Box>
         </>
     );

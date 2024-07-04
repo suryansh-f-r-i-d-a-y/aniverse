@@ -54,9 +54,9 @@ export default function Browse() {
                 <span style={{ fontSize: '1.2rem', fontWeight: '600' }}>Top Airing</span>
                 <Stack direction={'row'} flexWrap={'wrap'} sx={{gap:'2rem'}}>
                     {cardData.map(item => (
-                        <div>
-                            <ImageCard key={item.id} image={item.images.webp.image_url} title={item.title_english} id={item.mal_id} />
-                        </div>
+                        
+                            <ImageCard key={item.mal_id} image={item.images.webp.image_url} title={item.title_english} id={item.mal_id} />
+                        
                     ))}
                 </Stack>
             </Box>
@@ -64,9 +64,9 @@ export default function Browse() {
                 <span style={{ fontSize: '1.2rem', fontWeight: '600' }}>Upcoming</span>
                 <Stack direction={'row'} flexWrap={'wrap'} sx={{gap:'2rem'}}>
                     {upcoming.map(item => (
-                        <div>
-                            <ImageCard key={item.id} image={item.images.webp.image_url} title={item.title_english} id={item.mal_id} />
-                        </div>
+                       
+                            <ImageCard key={item.mal_id} image={item.images.webp.image_url} title={item.title_english} id={item.mal_id} />
+                        
                     ))}
                 </Stack>
             </Box>
