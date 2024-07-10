@@ -4,15 +4,13 @@ import AddRoundedIcon from '@mui/icons-material/AddRounded';
 import Link from 'next/link';
 
 export default function ImageCard({ image, title, id }) {
-  // console.log(image);
   return (
-    <Link href={`animeinfo/${id}`}>
-    <div className={styles.cardContainer}>
-      <div className={styles.image} style={{ backgroundImage: `url('${image}')` }}>  
+    <Link href={`animeinfo/${id}`} className={styles.cardLink}>
+      <div className={styles.cardContainer}>
+        <div className={styles.image} style={{ backgroundImage: `url('${image}')` }}></div>
+        <div className={styles.cardDesc}></div>
+        <span className={styles.title}>{title}</span>
       </div>
-     <div className={styles.cardDesc}></div>
-      <a className={styles.title}>{title}</a>
-    </div>
     </Link>
   );
 }

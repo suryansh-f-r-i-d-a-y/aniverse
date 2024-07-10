@@ -14,7 +14,7 @@ export default function Browse() {
     useEffect(() => {
         const getRecomendations = async () => {
             try {
-                const response = await axios.get(`https://api.jikan.moe/v4/top/anime?filter=airing&&limit=5`);
+                const response = await axios.get(`https://api.jikan.moe/v4/top/anime?filter=airing&limit=6`);
                 await setCardData(response.data.data);
                 console.log(response.data.data)
             } catch (err) {
@@ -24,7 +24,7 @@ export default function Browse() {
 
         const getUpcomingAnime = async () => {
             try {
-                const response = await axios.get(`https://api.jikan.moe/v4/top/anime?filter=upcoming&&limit=5`);
+                const response = await axios.get(`https://api.jikan.moe/v4/top/anime?filter=upcoming&limit=5`);
                 await setUpcoming(response.data.data);
             } catch (err) {
                 console.log('error occured', err)

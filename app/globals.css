@@ -114,7 +114,7 @@ html , body{
 }
 
 *{
-  padding: 0.4rem;
+  box-sizing: border-box;
 }
 
 body{
