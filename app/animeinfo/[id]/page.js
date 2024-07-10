@@ -28,27 +28,26 @@ export default function Animeinfo() {
 
     return (
         <>
-            <Box sx={{ width: '80%', margin: 'auto', marginBottom: '1rem' }} >
+            <Box  className={styles.synopsis} sx={{ width: '80%', margin: 'auto', marginBottom: '1rem' }} >
                 <h1>{animedetails?.title_english}</h1>
-                <Stack direction={'row'} gap={'1rem'}>
-                    {console.log(animedetails)}
+
+                <Stack  direction={'row'} gap={'1rem'} >
                     <Stack>
-                        <img src={animedetails?.images?.webp?.large_image_url} alt="" style={{ height: '500px', width: '300px' }} />
+                        <img src={animedetails?.images?.webp?.large_image_url} alt="" style={{ height: '400px', width: '250px' }} />
                         <span></span>
                     </Stack>
                     <Stack>
                         <p>Synopsis</p>
                         <span className={styles.text}>{animedetails?.synopsis}</span>
                     </Stack>
-
-
                 </Stack>
+
             </Box>
-            <Box className={styles.secBack} sx={{ width: '80%', height: '20vh', margin: 'auto' }}>
+            <Box className={styles.secBack} sx={{ width: '80%', margin: 'auto' }}>
                 <span> Information </span>
 
                 <Stack> <span>Genre: {animedetails?.genres?.map(item => (
-                    <button key={item.mal_id}> {item.name}</button>
+                    <button className={styles.btn}  key={item.mal_id}> {item.name}</button>
                 ))}</span>
                 <span>Popularity: {animedetails.popularity}</span>
                 <span>Rank: #{animedetails.rank}</span>
