@@ -1,20 +1,23 @@
+'use client'
 import styles from '../app/styles/card.module.css'
 import AddRoundedIcon from '@mui/icons-material/AddRounded';
-export default function ImageCard({key ,image , title }) {
+import Link from 'next/link';
 
-
-  // console.log(image);
-
+export default function ImageCard({ image, title, id }) {
   return (
-<div className={styles.cardContainer}>
-    <div  className={styles.main} style={{ backgroundImage: `url('${image}')` }}>
-    <div className={styles.buttonWrapper}>
-    <button className={styles.button}>
-      <AddRoundedIcon style={{fill:'white'}}/>
-    </button>
+    <Link href={`animeinfo/${id}`} className={styles.cardLink}>
+      <div className={styles.cardContainer}>
+        <div className={styles.image} style={{ backgroundImage: `url('${image}')` }}></div>
+        <div className={styles.cardDesc}></div>
+        <span className={styles.title}>{title}</span>
       </div>
-  </div>
-  <span>{title}</span>
-  </div>
+    </Link>
   );
 }
+
+
+{/* <div className={styles.buttonWrapper}>
+          <button className={styles.button}>
+            <AddRoundedIcon style={{ fill: 'white' }} />
+          </button>
+        </div> */}
