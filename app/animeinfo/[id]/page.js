@@ -17,7 +17,6 @@ export default function Animeinfo() {
             try {
                 const res = await axios.get(`https://api.jikan.moe/v4/anime/${id}/full`);
                 await setAnimeDetails(res.data.data);
-                // console.log(res);
             } catch (err) {
                 console.log('error occured', err);
             }
